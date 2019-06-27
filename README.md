@@ -6,5 +6,5 @@ In addition, I have shown the freedom level in terms of Law, Money, Military, Sa
 of all countries in the world from 2008 to 2016.
 With the help of Sliders and Drop-Downs, the user can manipulate the visualization and witness the degree of freedom. 
 
-<img>![image](https://user-images.githubusercontent.com/52187566/60239415-fb778d80-98f0-11e9-98c1-d3a983ee3e87.png)</img>
+
 
