@@ -35,7 +35,7 @@ shinyServer(function(input,output,session){
  
  
  #----------------------------------
-    
+ # Value box shows precise values in a card-type UI. The Value boxes in this case show precise Personal and Economic Freedom Values   
   output$pfrank = renderValueBox(
       valueBox(round(mean(yearinput()$pf_score),1),
                subtitle = tags$p("Personal Freedom Score", style = "font-size: 135%;"),
@@ -51,6 +51,9 @@ shinyServer(function(input,output,session){
     y <- list(
       title = "Economic Freedom"
     )
+  
+  #The scatter plot of Personal Freedom against Economic Freedom for all countries. 
+  #The scatter plot shows different trends from 2008 - 2016
     output$plot1 = renderPlotly(
     p <-   plot_ly(yearinput(), x = yearinput()$pf_score, y = yearinput()$ef_score, text = yearinput()$countries, type = 'scatter', color = yearinput()$region, colors = 'Paired', mode = 'markers',marker = list( size = 10, opacity = 0.7 )) %>% config (displayModeBar = F)%>%
         layout(title = 'Personal Freedom vs Economical Freedom',
@@ -61,7 +64,7 @@ shinyServer(function(input,output,session){
               )
     )
   
-   
+  #The donut chart shows value of different freedom factors  in different regions of the world. 
     output$plot2 <- renderPlotly(
     donut <- data.frame(selectfreedom() %>%
       group_by(year, region, value) %>%
@@ -77,7 +80,8 @@ shinyServer(function(input,output,session){
     )
     
    
-    
+  #The below code shows heat map of all countries in the world. 
+  #The heat map shows different trends for different freedom factors in different years.  
     output$Cart <- renderPlot({
       
       gtdMap <- joinCountryData2Map( inputs(),
@@ -94,6 +98,9 @@ shinyServer(function(input,output,session){
                
     })
     
+  
+  #The below code creates correlation plot of 2008,2012 and 2016.
+  #The freedom factors show correlation amongst themselves and show changing trends from 2008 - 2016
    output$corrout <- renderPlotly({
      if(input$selectcor == "corplots2008"){
        
