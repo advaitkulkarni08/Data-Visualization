@@ -10,3 +10,4 @@ With the help of Sliders and Drop-Downs, the user can manipulate the visualizati
 <img>![image](https://user-images.githubusercontent.com/52187566/60239843-5fe71c80-98f2-11e9-8858-7cf570700bb2.png)</img>
 <img>![image](https://user-images.githubusercontent.com/52187566/60240044-12b77a80-98f3-11e9-9737-99ef792d93db.png)</img>
 <img>![image](https://user-images.githubusercontent.com/52187566/60240124-54482580-98f3-11e9-89c2-4c56ea27f571.png)</img>
+<img>![image](https://user-images.githubusercontent.com/52187566/60240234-aab56400-98f3-11e9-8802-2de7f5f38386.png)</img>
