@@ -27,7 +27,7 @@ df3<-  df1[, (names(df1) %in% c("year","region","pf_rol",	"pf_ss_homicide","pf_s
 netgraph <- df3 %>%
   group_by(year,region)
 
-
+#Transforming rows into long format
 longdata <- gather(netgraph, key="freedom_factors", value="value", c("pf_rol",	"pf_ss_homicide","pf_ss_disappearances_fatalities", "pf_ss_women_fgm", "pf_ss_women_inheritance", "pf_religion","pf_association_sport","pf_association_political",	"pf_expression_internet", "pf_identity_sex", "ef_legal_judicial", "ef_legal_military",	"ef_money_growth",	"ef_trade_tariffs_revenue",	"ef_regulation_business_start","ef_regulation_business_bribes"))
 
 select_ops <- unique(longdata$freedom_factors)
@@ -52,7 +52,7 @@ choromap <- df[, (names(df) %in% c("year","ISO_code","countries","region","pf_ro
                   "Business Startups Recorded" =	"ef_regulation_business_start",
                   "Level of Corruption" = "ef_regulation_business_bribes")
  
-
+#Creating a correlation matrix
 corplots2016 <- df3%>%filter(year == 2016)
 corplots2008 <- df3%>%filter(year == 2008)
 corplots2012 <- df3%>%filter(year == 2012)
