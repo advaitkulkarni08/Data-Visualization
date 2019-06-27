@@ -7,4 +7,4 @@ of all countries in the world from 2008 to 2016.
 With the help of Sliders and Drop-Downs, the user can manipulate the visualization and witness the degree of freedom. 
 
 
-
+<img>![image](https://user-images.githubusercontent.com/52187566/60239843-5fe71c80-98f2-11e9-8858-7cf570700bb2.png)</img>
